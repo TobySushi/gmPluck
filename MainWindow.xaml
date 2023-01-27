@@ -9,44 +9,68 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25"/>
-            <ColumnDefinition Width="350"/>
-            <ColumnDefinition Width="25"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="475"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
 
-        <Border 
-            Grid.Row="0" 
-            Grid.ColumnSpan="3" 
-            Grid.RowSpan="3"
-            CornerRadius="15"
-        >
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 2">
-                    <GradientStop Color="#2a2a2a" Offset="0.0"></GradientStop>
-                    <GradientStop Color="#121212" Offset="1"></GradientStop>
-                </LinearGradientBrush>
-            </Border.Background>
+    <Window.Resources>
+        <Style x:Key="TreeViewItemStyle" TargetType="TreeViewItem">
+            <Setter Property="IsExpanded" Value="True" />
+            <Setter Property="IsSelected" Value="{Binding IsInitiallySelected, Mode=OneTime}"/>
+            <Setter Property="KeyboardNavigation.AcceptsReturn" Value="True"/>
+        </Style>
+        <HierarchicalDataTemplate x:Key="CheckBoxItemTemplate" ItemsSource="{Binding Children, Mode=OneTime}">
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Focusable="False" IsChecked="{Binding IsChecked}" VerticalAlignment="Center"/>
+                <ContentPresenter Content="{Binding Name, Mode=OneTime}" Margin="2,0"/>
+            </StackPanel>
+        </HierarchicalDataTemplate>
+    </Window.Resources>
+    
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="25"/>
+      <ColumnDefinition Width="350"/>
+      <ColumnDefinition Width="25"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="75"/>
+      <RowDefinition Height="475"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <Border
+        Grid.Row="0"
+        Grid.ColumnSpan="3"
+        Grid.RowSpan="3"
+        CornerRadius="15"
+        BorderBrush="#c75fbd"
+        BorderThickness="5"
+      >
+      <Border.Background>
+        <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 2">
+          <GradientStop Color="#2a2a2a" Offset="0.0"></GradientStop>
+          <GradientStop Color="#121212" Offset="1"></GradientStop>
+        </LinearGradientBrush>
+      </Border.Background>
 
             <Border.Clip>
                 <RectangleGeometry RadiusX="15"
-                                   RadiusY="15"
-                                   Rect="0,0,400,600"/>
+                            RadiusY="15"
+                            Rect="0,0,400,600"/>
             </Border.Clip>
+     </Border>
+
+        <Border Grid.Row="1" Grid.Column="1">
+            <TreeView Height="425" HorizontalAlignment="Center" Margin="0, 12, 0, 0" x:Name="tree" VerticalAlignment="Top" Width="400"
+                  ItemContainerStyle="{StaticResource TreeViewItemStyle}"
+                  ItemTemplate="{StaticResource CheckBoxItemTemplate}" />
         </Border>
 
-        <Border 
-            Grid.Row="0" 
-            Grid.ColumnSpan="3" 
-            Background="#c75fbd" 
-            CornerRadius="15,15,0,0"
-            />
+    <Border
+        Grid.Row="0"
+        Grid.ColumnSpan="3"
+        Background="#c75fbd"
+        CornerRadius="15,15,0,0"
+          />
 
-    </Grid>
+  </Grid> 
+
 </Window>

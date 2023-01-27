@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TreeView;
 
 namespace gmPluck
 {
@@ -23,6 +24,11 @@ namespace gmPluck
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            tree.ItemsSource = TreeViewModel.SetTree("Top Level");
         }
     }
 }

@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Tobo\\.nuget\\packages\\": {}
+    "C:\\Users\\tobyi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "B:\\Documents\\MEGA\\Development\\Programs\\gmPluck\\gmPluck.csproj",
+      "projectUniqueName": "C:\\Users\\tobyi\\Documents\\GitHub\\gmPluck\\gmPluck.csproj",
       "projectName": "gmPluck",
-      "projectPath": "B:\\Documents\\MEGA\\Development\\Programs\\gmPluck\\gmPluck.csproj",
-      "packagesPath": "C:\\Users\\Tobo\\.nuget\\packages\\",
-      "outputPath": "B:\\Documents\\MEGA\\Development\\Programs\\gmPluck\\obj\\",
+      "projectPath": "C:\\Users\\tobyi\\Documents\\GitHub\\gmPluck\\gmPluck.csproj",
+      "packagesPath": "C:\\Users\\tobyi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tobyi\\Documents\\GitHub\\gmPluck\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Tobo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tobyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -63,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
