@@ -9,8 +9,10 @@
 
   <ItemGroup>
     <Folder Include="Core\ViewModel\" />
-    <Folder Include="Fonts\" />
     <Folder Include="Images\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Fonts\" />
+    <Resource Include="Fonts\VarelaRound-Regular.ttf"/>
   </ItemGroup>
 
 </Project>

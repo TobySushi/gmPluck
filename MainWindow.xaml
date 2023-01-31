@@ -16,11 +16,11 @@
                 <Setter Property="IsExpanded" Value="True" />
                 <Setter Property="IsSelected" Value="{Binding IsInitiallySelected, Mode=OneTime}" />
                 <Setter Property="KeyboardNavigation.AcceptsReturn" Value="True" />
-                
-                <Setter Property="FontSize" Value="16"/>
-                <Setter Property="FontFamily" Value="/Resources/#VarelaRound-Regular"/>
 
+                <Setter Property="FontSize" Value="16"/>
                 <Setter Property="Margin" Value="10, 0, 0, 0"/>
+                <Setter Property="Foreground" Value="#fff"/>
+
             </Style>
             <HierarchicalDataTemplate x:Key="CheckBoxItemTemplate" ItemsSource="{Binding Children, Mode=OneTime}">
                 <StackPanel Orientation="Horizontal">
@@ -62,18 +62,27 @@
                             Rect="0,0,400,600"/>
             </Border.Clip>
         </Border>
-        
+
         <Border Grid.Row="1" Grid.Column="1" Background="Transparent">
-            <TreeView Height="425" HorizontalAlignment="Center" Margin="0, 12, 0, 0" Padding="20,20,0,20" x:Name="tree" VerticalAlignment="Top" Width="400"
-                  ItemContainerStyle="{StaticResource TreeViewItemStyle}"
-                  ItemTemplate="{StaticResource CheckBoxItemTemplate}" />
+            <TreeView FontFamily="./Fonts/#Varela Round Regular"
+                      Height="425" HorizontalAlignment="Center" 
+                      Margin="0, 15, 0, 0" Padding="20,20,0,20" 
+                      x:Name="tree" 
+                      VerticalAlignment="Top" 
+                      Width="400"
+                      Background="Transparent"
+                      
+                      ItemContainerStyle="{StaticResource TreeViewItemStyle}"
+                      ItemTemplate="{StaticResource CheckBoxItemTemplate}" />
         </Border>
-        
+
         <Border
         Grid.Row="0"
         Grid.ColumnSpan="3"
         Background="#c75fbd"
         CornerRadius="15,15,0,0"
-          />
+        >
+            <TextBlock FontSize="30" FontFamily="./Fonts/#Varela Round Regular" VerticalAlignment="Center" HorizontalAlignment="Center">gmPluck</TextBlock>
+        </Border>
     </Grid>
 </Window>
